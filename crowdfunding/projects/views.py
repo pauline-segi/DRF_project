@@ -26,7 +26,8 @@ class ProjectList(APIView):
                 )
         return Response(
             serializer.errors,
-            status=status.HTTP_400_BAD_REQUEST)
+            status=status.HTTP_400_BAD_REQUEST
+            )
 
 
 class ProjectDetail(APIView):
@@ -41,5 +42,8 @@ class ProjectDetail(APIView):
         project = self.get_object(pk)
         serializer = ProjectSerializer(project)
         return Response(serializer.data)
+
+
+
 
 
