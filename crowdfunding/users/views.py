@@ -1,12 +1,9 @@
-from django.shortcuts import render
 from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .models import CustomUser
 from .serializers import CustomUserSerializer
-
-# Create your views here.
 
 class CustomUserList(APIView):
     def get(self, request):
