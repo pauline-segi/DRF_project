@@ -1,10 +1,10 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Project, Pledge
-from .serializers import ProjectSerializer, PledgeSerializer, ProjectDetailSerializer
+from .serializers import ProjectSerializer, PledgeSerializer, ProjectDetailSerializer, PledgeDetailSerializer
 from django.http import Http404
 from rest_framework import status, permissions
-from .permissions import IsOwnerOrReadOnly
+from .permissions import IsOwnerOrReadOnly, IsSupporterOrReadOnly
 
 # Create your views here.
 
@@ -32,7 +32,6 @@ class ProjectList(APIView):
 
 
 class ProjectDetail(APIView):
-
     permission_classes = [
         permissions.IsAuthenticatedOrReadOnly,
         IsOwnerOrReadOnly
@@ -60,13 +59,15 @@ class ProjectDetail(APIView):
             )
         if serializer.is_valid():
             serializer.save()
-            # return Response(serializer.data) 
-            # the line above was added as an extra during class by Carlie, not sure if we keep it or not
+            return Response(
+                serializer.data, 
+                status=status.HTTP_200_OK
+                )
 
-# Add status codes above for the error codes, you can maybe reference against the code below for this with the certain error code numbers (end of page 4 in Permissions doc)
 
 
 class PledgeList(APIView):
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def get(self, request):
         pledges = Pledge.objects.all()
@@ -85,7 +86,42 @@ class PledgeList(APIView):
             serializer.errors,
             status=status.HTTP_400_BAD_REQUEST
         )
+    
 
+
+
+class PledgeDetail(APIView):
+    permission_classes = [
+        permissions.IsAuthenticatedOrReadOnly,
+        IsSupporterOrReadOnly
+    ]
+
+    def get_object(self, pk):
+        try:
+            pledge = Pledge.objects.get(pk=pk)
+            self.check_object_permissions(self.request, pledge)
+            return pledge
+        except Pledge.DoesNotExist:
+            raise Http404
+    
+    def get(self, request, pk):
+        pledge = self.get_object(pk)
+        serializer = PledgeDetailSerializer(pledge)
+        return Response(serializer.data)
+
+    def put(self, request, pk):
+        pledges = self.get_object(pk)
+        serializer = PledgeDetailSerializer(
+            instance=pledges,
+            data=request.data,
+            partial=True
+            )
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                serializer.data, 
+                status=status.HTTP_200_OK
+                )
 
 
 
