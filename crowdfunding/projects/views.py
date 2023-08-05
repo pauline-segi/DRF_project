@@ -60,6 +60,8 @@ class ProjectDetail(APIView):
             )
         if serializer.is_valid():
             serializer.save()
+            # return Response(serializer.data) 
+            # the line above was added as an extra during class by Carlie, not sure if we keep it or not
 
 # Add status codes above for the error codes, you can maybe reference against the code below for this with the certain error code numbers (end of page 4 in Permissions doc)
 
