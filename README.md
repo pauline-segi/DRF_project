@@ -21,13 +21,13 @@ Persons who have a bit of extra cash, a bit more settled in life, and who have p
 
 ## Features
 {{ The features your MVP will include. (Remember this is a working document, you can change these as you go!) }}
-* [] User can create an account (one account can be associated with both Owner and/or Supporter)
-* [] User can login/logout of account (Username / Email / Password)
+* [x] User can create an account (one account can be associated with both Owner and/or Supporter)
+* [x] User can login/logout of account (Username / Email / Password)
 * [] User can add a profile picture
 * [] User can add a bio
-* [] User can create a project
-* [] User can pledge to a project
-* [] User can delete a project (only the Owner of the project can delete the project)
+* [x] User can create a project
+* [x] User can pledge to a project
+* [x] User can delete a project (only the Owner of the project can delete the project)
 * [] User can search projects
 
 
@@ -111,6 +111,8 @@ Deployed Project: [Deployed website](http://linkhere.com/)
 
 ### How To Register a New User
 {{ Step by step instructions for how to register a new user and create a new project (i.e. endpoints and body data). }}
+
+<!-- This is like what a Get post will do and what the end point is, what a Post will do, and what are the end points and what they do. --> 
 
 ### Screenshots
 * [] A screenshot of Insomnia, demonstrating a successful GET method for any endpoint.
