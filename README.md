@@ -19,6 +19,7 @@ Persons who have a bit of extra cash, a bit more settled in life, and who have p
 
 }}
 
+
 ## Features
 {{ The features your MVP will include. (Remember this is a working document, you can change these as you go!) }}
 * [x] User can create an account (one account can be associated with both Owner and/or Supporter)
@@ -35,9 +36,9 @@ Persons who have a bit of extra cash, a bit more settled in life, and who have p
 ### Stretch Goals
 {{ Outline three features that will be your stretch goals if you finish your MVP }}
 
-* [] User can share the project to social media (as either Owner or Supporter)
-* [] User can see a donation progress bar
-* [] Users can search for projects
+* [] Users can share the project to social media (as either Owner or Supporter)
+* [] Users can see a donation progress bar
+* [] Owner can respond to comments from Supporters (thanking them etc.) 
 
 
 ## API Specification
@@ -48,13 +49,13 @@ Persons who have a bit of extra cash, a bit more settled in life, and who have p
 | POST | projects/ | Create a new project | project object | 201 | User must be logged in. |
 
 
-'''this is all the endpoints (the urls) to get there on our website. so a user can create a project, so we'll add a url here to see what that would look like. This includes the error codes. refer to the Example REST API Specification for details on what I might need, mayve I'll need different ones, maybe I won't need all of them etc.'''
+'''this is all the endpoints (the urls) to get there on our website. so a user can create a project, so we'll add a url here to see what that would look like. This includes the error codes. refer to the Example REST API Specification for details on what I might need, maybe I'll need different ones, maybe I won't need all of them etc.'''
 
 
 ## Database Schema
 {{ Insert your database schema }}
 
-![My Schema list which so far I have achieved, but could potentially look at adding more](./REST-API-Specs.xlsx)
+![My Database Schema list which so far I have achieved, but could potentially look at adding more](./REST-API-Specs.xlsx)
 
 
 ## Wireframes
@@ -77,6 +78,7 @@ Cloud logo: https://app.brandmark.io/nounpreview/670146.png
 
 ![Logo image](./docs/img/logo.png)
 
+
 ## Fonts
 {{ outline your heading & body font(s) }}
 
@@ -89,25 +91,28 @@ Body Font - Brandmark Sans 2
 ## Submission Documentation
 {{ Fill this section out for submission }}
 
-Deployed Project: [What will eventually become the backend of KnowMads](https://thunder-dude-747.fly.dev/projects/)
+Deployed Project: [This is my deployed site, and what will eventually become the backend of KnowMads](https://thunder-dude-747.fly.dev/projects/)
+
 
 ### How To Run
 {{ What steps to take to run this code }}
+
 
 ### Updated Database Schema
 {{ Updated schema }}
 
 ![image info goes here](./docs/image.png)
 
+
 ### Updated Wireframes
 {{  Updated wireframes }}
 
 ![image info goes here](./docs/image.png)
 
+
 ### How To Register a New User
 {{ Step by step instructions for how to register a new user and create a new project (i.e. endpoints and body data). }}
 
-<!-- This is like what a Get post will do and what the end point is, what a Post will do, and what are the end points and what they do. --> 
 
 ### Screenshots
 * [] A screenshot of Insomnia, demonstrating a successful GET method for any endpoint.
