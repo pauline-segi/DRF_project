@@ -54,18 +54,13 @@ Persons who have a bit of extra cash, a bit more settled in life, and who have p
 ## Database Schema
 {{ Insert your database schema }}
 
-![image info goes here](./docs/image.png)
-
-'''this is the table ERD that we'll make to show the checklist of all the endpoints in the backend and how they all relate to each other'''
+![My Schema list which so far I have achieved, but could potentially look at adding more](./REST-API-Specs.xlsx)
 
 
 ## Wireframes
 {{ Insert your wireframes }}
 
-![image info goes here](./docs/image.png)
-
-
-'''this is the table ERD that we'll make to show the checklist of all the endpoints in the backend and how they all relate to each other'''
+![My wireframe for the KnowMads website -- very rough and definitely needs a bit more work, but getting there](./docs/image.png)
 
 
 ## Colour Scheme
@@ -94,7 +89,7 @@ Body Font - Brandmark Sans 2
 ## Submission Documentation
 {{ Fill this section out for submission }}
 
-Deployed Project: [Deployed website](http://linkhere.com/)
+Deployed Project: [What will eventually become the backend of KnowMads](https://thunder-dude-747.fly.dev/projects/)
 
 ### How To Run
 {{ What steps to take to run this code }}
@@ -116,10 +111,13 @@ Deployed Project: [Deployed website](http://linkhere.com/)
 
 ### Screenshots
 * [] A screenshot of Insomnia, demonstrating a successful GET method for any endpoint.
-![image info goes here](./docs/image.png)
+![An image of a successful GET method for pulling a list of all the Pledges](./project_files/GET.png)
 
 * [] A screenshot of Insomnia, demonstrating a successful POST method for any endpoint.
-![image info goes here](./docs/image.png)
+![An image of a successful POST method for Creating a New User](./project_files/POST.png)
+
+* [] A screenshot of Insomnia, demonstrating a successful PUT method for any endpoint.
+![An image of a successful PUT method for updating a project which is already posted](./project_files/PUT.png)
 
 * [] A screenshot of Insomnia, demonstrating a token being returned.
-![image info goes here](./docs/image.png)
+![An image of a successful API Token Auth being returned](./project_files/TOKEN.png)
