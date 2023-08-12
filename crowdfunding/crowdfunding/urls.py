@@ -26,3 +26,4 @@ urlpatterns = [
     path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
 ]
 
+handler404 = 'thunder-dude-747.views.handler404'
