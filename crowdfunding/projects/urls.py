@@ -7,7 +7,7 @@ urlpatterns = [
     path('projects/<int:pk>/', views.ProjectDetail.as_view()),
     path('pledges/', views.PledgeList.as_view()),
     path('pledges/<int:pk>/', views.PledgeDetail.as_view()),
-    
+    path('404/', views.custom_404, name='custom_404'),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

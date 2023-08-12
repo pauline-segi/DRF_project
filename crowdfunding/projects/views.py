@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Project, Pledge
@@ -124,6 +125,8 @@ class PledgeDetail(APIView):
                 )
 
 
+def custom_404_view(request, exception):
+    return render(request, '404.html', status=404)
 
 
 
