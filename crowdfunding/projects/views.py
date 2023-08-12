@@ -125,7 +125,8 @@ class PledgeDetail(APIView):
                 )
 
 
-def handler404(request, exception):
-    return render(request, '404.html', status=404)
+class HttpResponseNotFound(APIView):
+    status_code = 404
 
-
+    def custom_404(request, exception=None):
+        return render(request, '404.html', context={'exception': exception})
