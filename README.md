@@ -98,12 +98,12 @@ Deployed Project: [This is my deployed site, and what will eventually become the
 I wasn't too sure what you were after here.. So I'm hoping I'm on the right track..
 
 1. Clone my Github Repo for the project onto your own computer, and in the appropriate location.
-2. You'd then want to setup your Virtual Environment (or venv) when you're in the folder with the 'manage.py' file
+2. You'd then want to setup your Virtual Environment (or venv) when you're in the folder with the 'requirements.txt' file
 3. Then you'll activate the venv environment
 4. You'll then install anything you may need, like we installed pip
 5. You can apply and make your migrations
 6. Then you can create a superuser to have full access in the app
-7. And then you're ready to run the app!
+7. And then you're ready to runserver with the app! You'll need to be in the folder which has the 'manage.py' file to do this
 
 
 ### Updated Database Schema
