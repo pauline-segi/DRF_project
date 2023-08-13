@@ -7,7 +7,7 @@ She Codes crowdfunding project - DRF Backend.
 
 {{ 
 KnowMads
-their destination, fuelled by your donation.
+Their destination, fuelled by your donation.
 
 My project is called KnowMads (a play on words for Grey Nomads - the common term for retirees who are off adventuring across the country in their caravans and mobile homes).
 
@@ -38,7 +38,7 @@ Persons who have a bit of extra cash, a bit more settled in life, and who have p
 
 * [] Users can share the project to social media (as either Owner or Supporter)
 * [] Users can see a donation progress bar
-* [] Owner can respond to comments from Supporters (thanking them etc.) 
+* [] Owners can respond to comments from Supporters (thanking them etc.) 
 
 
 ## API Specification
@@ -48,8 +48,6 @@ Persons who have a bit of extra cash, a bit more settled in life, and who have p
 | GET | projects/ | Return all projects | N/A | 200 | N/A |
 | POST | projects/ | Create a new project | project object | 201 | User must be logged in. |
 
-
-'''this is all the endpoints (the urls) to get there on our website. so a user can create a project, so we'll add a url here to see what that would look like. This includes the error codes. refer to the Example REST API Specification for details on what I might need, maybe I'll need different ones, maybe I won't need all of them etc.'''
 
 
 ## Database Schema
@@ -97,6 +95,16 @@ Deployed Project: [This is my deployed site, and what will eventually become the
 ### How To Run
 {{ What steps to take to run this code }}
 
+I wasn't too sure what you were after here.. So I'm hoping I'm on the right track..
+
+1. Clone my Github Repo for the project onto your own computer, and in the appropriate location.
+2. You'd then want to setup your Virtual Environment (or venv) when you're in the folder with the 'manage.py' file
+3. Then you'll activate the venv environment
+4. You'll then install anything you may need, like we installed pip
+5. You can apply and make your migrations
+6. Then you can create a superuser to have full access in the app
+7. And then you're ready to run the app!
+
 
 ### Updated Database Schema
 {{ Updated schema }}
@@ -112,6 +120,37 @@ Deployed Project: [This is my deployed site, and what will eventually become the
 
 ### How To Register a New User
 {{ Step by step instructions for how to register a new user and create a new project (i.e. endpoints and body data). }}
+
+1. To register a new user, we head to https://thunder-dude-747.fly.dev/users/ and select a POST method. 
+
+In the JSON body section, we ask for these details:
+
+{
+	"username":"",
+	"password":"",
+	"email":""
+}
+
+Once the request is sent successfully, we will have generated a new user.
+
+
+2. To create a new project, we head to https://thunder-dude-747.fly.dev/projects/ and select a POST method. 
+
+In the JSON body section, we ask for these details:
+
+	{
+		"id": ,
+		"owner": ,
+		"title": "",
+		"description": "",
+		"goal": ,
+		"image": "",
+		"is_open": ,
+		"date_created": ""
+	}
+
+Once the request is sent successfully, we will have created a new project.
+
 
 
 ### Screenshots
