@@ -138,8 +138,11 @@ class HttpResponseNotFound(APIView):
     def custom_404(request, exception=None):
         return render(request, '404.html', context={'exception': exception})
 
-def about_view(request):
-    about_data = {
-        'content': 'Welcome to Know Mads!',
-    }
-    return render(request, 'about.html', {'about_data': about_data})
+
+class AboutDetail(APIView):
+
+    def about_view(request):
+        about_data = {
+            'content': 'Welcome to Know Mads!',
+        }
+        return render(request, 'about.html', {'about_data': about_data})
